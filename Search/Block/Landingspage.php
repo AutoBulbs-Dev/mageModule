@@ -5,7 +5,7 @@ use Magento\Framework\View\Element\Template;
 
 class Landingspage extends Template
 {
-  public function getLandingsUrl()
+  public function getSearchUrl()
   {
      return $this->getUrl('search');
   }

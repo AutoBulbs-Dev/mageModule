@@ -1,3 +1,9 @@
-<referenceContainer name="content">
-	<block class="ABD\Search\Block\Landingspage" name="landingsblock" template="ABD_Search::landingspage.phtml" />
-</referenceContainer>
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+    	<title>RegLookUp Test</title>
+    </head>
+	<referenceContainer name="content">
+		<block class="ABD\Search\Block\Landingspage" name="landingsblock" template="ABD_Search::landingspage.phtml" />
+	</referenceContainer>
+</page>
