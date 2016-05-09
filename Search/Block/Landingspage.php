@@ -1,5 +1,5 @@
 <?php
-namespace ABDirect\Search\Block;
+namespace ABD\Search\Block;
 
 use Magento\Framework\View\Element\Template;
 
@@ -14,5 +14,5 @@ class Landingspage extends Template
   {
      return $this->getUrl('search/index/redirect');
   }
-  
+
 }

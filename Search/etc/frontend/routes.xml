@@ -3,7 +3,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
    <router id="standard">
        <route id="search" frontName="search">
-           <module name="ABDirect_Search" />
+           <module name="ABD_Search" />
        </route>
    </router>
 </config>

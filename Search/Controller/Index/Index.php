@@ -1,5 +1,5 @@
 <?php
-       namespace ABDirect\Search\Controller\Index;
+       namespace ABD\Search\Controller\Index;
        
        class Index extends \Magento\Framework\App\Action\Action
        {

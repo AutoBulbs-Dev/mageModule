@@ -1,3 +1,3 @@
 <referenceContainer name="content">
-	<block class="ABDirect\Search\Block\Landingspage" name="landingsblock" template="ABDirect_Search::landingspage.phtml" />
+	<block class="ABD\Search\Block\Landingspage" name="landingsblock" template="ABD_Search::landingspage.phtml" />
 </referenceContainer>
