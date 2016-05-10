@@ -22,7 +22,7 @@ class Newproducts extends Template
 	    $collection
 	        ->addAttributeToSelect('*')
 	        ->setOrder('created_at')
-	        ->setPageSize(5);
+	        ->setPageSize(4);
 	    return $collection;
 	}
 }
