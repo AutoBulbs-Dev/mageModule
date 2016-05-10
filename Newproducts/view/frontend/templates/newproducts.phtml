@@ -1,1 +1,6 @@
 <h4>New Products</h4>
+<ul>
+<?php foreach ($block->getProducts() as $product): ?>
+   <li><?php echo $product->getName() ?></li>
+<?php endforeach; ?>
+</ul>
