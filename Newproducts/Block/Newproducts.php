@@ -20,9 +20,28 @@ class Newproducts extends Template
 	{
 		$collection = $this->_productCollectionFactory->create();
 	    $collection
-	        ->addAttributeToSelect('*')
+	    	// Selects all product attributes
+	    	->addAttributeToSelect('*')
+
+	    	// Array for product list (use * to select all)
+	        // ->addAttributeToSelect([
+	        // 	'sku', 
+	        // 	'name',
+	        // 	'image',
+	        // 	'price',
+	        // ])
+
+	        // Filter for specific attribute.
+	        ->addAttributeToFilter('name', array(
+           		'like' => '%bulb%'
+           	))
+           	// Which store are we filtering products from
+           	-> addStoreFilter(1)
+           	// Sets display for newest products
 	        ->setOrder('created_at')
-	        ->setPageSize(4);
+	        // Amount of products to be displayed
+	        ->setPageSize(12);
+
 	    return $collection;
 	}
 }

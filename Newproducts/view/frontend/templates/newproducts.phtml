@@ -1,6 +1,47 @@
-<h4>New Products</h4>
-<ul>
-<?php foreach ($block->getProducts() as $product): ?>
-   <li><?php echo $product->getName() ?></li>
-<?php endforeach; ?>
-</ul>
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+use Magento\Framework\App\Action\Action;
+?>
+<?php
+/**
+ * Product list template
+ *
+ * @var $block \Magento\Catalog\Block\Product\ListProduct
+ */
+?>
+
+<div class="products wrapper grid products-grid">
+	<h4 class="block-title">Test Products</h4>
+	<?php $iterator = 1; ?>
+	<ol class="products list items product-items">
+		<?php foreach ($block->getProducts() as $product): ?>
+			<li class="item product product-item">
+				<div class="product-item-info" data-container="product-grid">
+					<a href="<?php echo $product->getProductUrl() ?>" class="product photo product-item-photo" tabindex="-1">
+						<span class="product-image-container" style="width:240px;">
+							<span class="product-image-wrapper" style="padding-bottom:125%;">
+								<img class="product-image-photo" src="<?php echo $product->getImage() ?>" width="240;" height="300">
+							</span>
+						</span>
+					</a>
+				</div>
+				<div class="product details product-item-details">
+					<strong class="product name product-item-name">
+						<a href="<?php echo $product->getProductUrl() ?>" class="product-item-link">
+							<?php echo $product->getName() ?>
+						</a>
+					</strong>
+					<a href="<?php echo $product->getProductUrl() ?>">
+						<?php echo $product->getSku() ?>
+					</a>
+					<a href="<?php echo $product->getProductUrl() ?>">
+						<?php echo $product->getPrice() ?>
+					</a>
+				</div>
+			</li>
+		<?php endforeach; ?>
+	</ol>
+</div>
